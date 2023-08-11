@@ -1,0 +1,184 @@
+/* Raleway 800, 500 */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;800&display=swap');
+
+/* Merriweather 400 */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+
+/* Open Sans 400 */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* Instead of centering our navigation relative to the content,
+    we are utilizing a grid to center it with respect to the screen. */
+    align-items: center;
+    padding: 32px 60px;
+    z-index: 1;
+}
+
+.logo {
+    font-family: "Raleway", sans-serif;
+    font-weight: 800;
+    font-size: 24px;
+    letter-spacing: 4px;
+    color: #FFFFFF;
+}
+
+nav {
+    margin: 0 auto;
+}
+
+nav ul {
+    display: flex;
+    gap: 40px;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.header-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 50px;
+}
+
+.login {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.join-btn {
+    text-decoration: none;
+    color: #000000;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    padding: 18px 30px;
+    background-color: #f8c761;
+    border-radius: 50px;
+    transition: .2s ease;
+}
+
+.join-btn:hover {
+    opacity: .7;
+}
+
+/* Use grid or flexbox to achieve a centered background for our transition */
+#home {
+    position: relative;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(/images/travel-boat.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
+    animation: zoom-out 1.5s cubic-bezier(.645, .045, .355, 1) 1;
+}
+
+@keyframes zoom-out {
+    from {
+        width: 110%;
+        height: 110%;
+    }
+
+    to {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.darken-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    opacity: .3;
+    z-index: -1;
+}
+
+.hero-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+h1 {
+    color: #FFFFFF;
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    font-size: 140px;
+    line-height: 95%;
+    max-width: 1400px;
+    text-align: center;
+}
+
+.underline-content {
+    position: relative;
+}
+
+.underline-wrapper {
+    position: absolute;
+    bottom: -28px;
+    left: 0;
+    z-index: -1;
+    overflow: hidden;
+    animation: slide .8s cubic-bezier(.654, .045, .355, 1) 1;
+}
+
+@keyframes slide {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 310px;
+    }
+}
+
+.call-to-action {
+    font-size: 15px;
+    text-decoration: none;
+    color: #000000;
+    font-family: "Open Sans", sans-serif;
+    background-color: #f8c761;
+    padding: 32px 105px;
+    margin-top: 75px;
+    margin-bottom: 55px;
+    border-radius: 50px;
+    transition: .2s ease;
+}
+
+.call-to-action:hover {
+    opacity: .7;
+}
+
+/* Happy coding :) */
